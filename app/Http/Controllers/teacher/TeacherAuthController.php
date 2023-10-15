@@ -1,29 +1,29 @@
 <?php
 
-namespace App\Http\Controllers\student;
+namespace App\Http\Controllers\teacher;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StudentLoginRequest;
-use App\Http\Requests\StudentRegisterRequest;
-use App\Models\Student;
+use App\Http\Requests\TeacherLoginRequest;
+use App\Http\Requests\TeacherRegisterRequest;
+use App\Models\Teacher;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-class StudentAuthController extends Controller
+class TeacherAuthController extends Controller
 {
     use HttpResponses;
-    public function login(StudentLoginRequest $request)
+    public function login(TeacherLoginRequest $request)
     {
         $request->validated();
 
-        if(!Auth::guard('student')->attempt($request->only(['email','password'])))
+        if(!Auth::guard('teacher')->attempt($request->only(['email','password'])))
         {
             return $this->error('','Credentials do not match',401);
         }
 
-        $student = Student::where('email',$request->email)->first();
+        $student = Teacher::where('email',$request->email)->first();
 
         return $this->success([
             'student' => $student,
@@ -32,7 +32,7 @@ class StudentAuthController extends Controller
 
     }
 
-    public function register(StudentRegisterRequest $request)
+    public function register(TeacherRegisterRequest $request)
     {
         $request->validated($request->all());
 
@@ -40,7 +40,6 @@ class StudentAuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'grade_id' => $request->grade_id,
             'password'=>Hash::make($request->password),
         ]);
 
@@ -55,8 +54,12 @@ class StudentAuthController extends Controller
         Auth::user()->currentAccessToken()->delete();
 
         return $this->success([
-           'message'=>'You have Successfully logged out',
+            'message'=>'You have Successfully logged out',
         ]);
     }
 
+    public function specializations()
+    {
+        return 'specializations';
+    }
 }
