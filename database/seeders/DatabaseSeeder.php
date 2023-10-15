@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
 
         foreach ($grades as $key => $grade)
         {
-            if($key<3)
+            if($key==1 || $key ==2)
             {
                 foreach ($specializations as $specialization)
                     Grade::create(['name'=>$grade,'specialization_id'=>$specialization,'image_path'=>public_path('Images').'/'.$paths[$key]]);
