@@ -19,26 +19,16 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
 
-        Teacher::create(['name'=>'teacher','email'=>'teacher@gmail.com','phone'=>'1234567899','password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher','email'=>'teacher@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
         Specialization::create(['name'=>'علمى']);
         Specialization::create(['name'=>'أدبى']);
-        Specialization::create(['name'=>'عام']);
 
-        $specializations=[1,2,3];
-        $grades = ['الصف الأول الثانوى','الصف الثانى الثانوى','الصف الثالث الثانوى','الصف الأول الإعدادى','الصف الثانى الإعدادى','الصف الثالث الإعدادى'];
-        $paths = ['1th.jpg','2th.jpg','3th.jpg','1a.jpg','2a.jpg','3a.jpg'];
+        $grades = ['الصف الأول الثانوى','الصف الثانى الثانوى','الصف الثالث الثانوى'];
+        $paths = ['1th.jpg','2th.jpg','3th.jpg'];
 
         foreach ($grades as $key => $grade)
         {
-            if($key==1 || $key ==2)
-            {
-                foreach ($specializations as $specialization)
-                    Grade::create(['name'=>$grade,'specialization_id'=>$specialization,'image_path'=>public_path('Images').'/'.$paths[$key]]);
-            }
-            else
-            {
-                Grade::create(['name'=>$grade,'specialization_id'=>3,'image_path'=>public_path('Images').'/'.$paths[$key]]);
-            }
+            Grade::create(['name'=>$grade,'image_path'=>public_path('Images').'/'.$paths[$key]]);
         }
 
 

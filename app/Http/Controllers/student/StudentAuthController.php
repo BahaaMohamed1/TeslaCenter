@@ -16,8 +16,6 @@ class StudentAuthController extends Controller
     use HttpResponses;
     public function login(StudentLoginRequest $request)
     {
-        $request->validated();
-
         if(!Auth::guard('student')->attempt($request->only(['email','password'])))
         {
             return $this->error('','Credentials do not match',401);
@@ -34,13 +32,12 @@ class StudentAuthController extends Controller
 
     public function register(StudentRegisterRequest $request)
     {
-        $request->validated($request->all());
-
         $student = Student::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
             'grade_id' => $request->grade_id,
+            'wallet'=>0,
             'password'=>Hash::make($request->password),
         ]);
 

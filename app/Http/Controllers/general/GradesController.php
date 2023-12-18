@@ -17,9 +17,4 @@ class GradesController extends Controller
     {
         return response()->json(Grade::all());
     }
-
-    public function gradesFromSpecialization(Specialization $specialization)
-    {
-        return $this->success(GradesResource::collection($specialization->grades));
-    }
 }

@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('specialization_id');
-            $table->foreign('specialization_id')->references('id')->on('specializations')->onDelete('cascade');
             $table->string('image_path');
             $table->timestamps();
         });
