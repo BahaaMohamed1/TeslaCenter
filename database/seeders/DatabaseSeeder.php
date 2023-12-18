@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
 
 
         Teacher::create(['name'=>'teacher','email'=>'teacher@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'admin','email'=>'admin@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'role'=>'admin','password'=>bcrypt('123456')]);
         Specialization::create(['name'=>'علمى']);
         Specialization::create(['name'=>'أدبى']);
 
