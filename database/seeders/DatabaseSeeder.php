@@ -20,6 +20,17 @@ class DatabaseSeeder extends Seeder
 
 
         Teacher::create(['name'=>'teacher','email'=>'teacher@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher1','email'=>'teacher1@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher2','email'=>'teacher2@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher3','email'=>'teacher3@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher4','email'=>'teacher4@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher5','email'=>'teacher5@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher6','email'=>'teacher6@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher7','email'=>'teacher7@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher8','email'=>'teacher8@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher9','email'=>'teacher9@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher10','email'=>'teacher10@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher11','email'=>'teacher11@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
         Teacher::create(['name'=>'admin','email'=>'admin@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'role'=>'admin','password'=>bcrypt('123456')]);
         Specialization::create(['name'=>'علمى']);
         Specialization::create(['name'=>'أدبى']);

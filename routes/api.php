@@ -12,3 +12,8 @@ Route::get('specializations',[\App\Http\Controllers\general\SpecializationContro
 Route::get('grades',[\App\Http\Controllers\general\GradesController::class,'index']);
 
 
+/////////// get all teachers /////////////
+Route::get('teachers',[\App\Http\Controllers\general\TeacherController::class,'index']);
+
+
+
