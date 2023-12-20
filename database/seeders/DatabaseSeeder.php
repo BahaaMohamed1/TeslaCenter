@@ -19,18 +19,18 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
 
-        Teacher::create(['name'=>'teacher','email'=>'teacher@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher1','email'=>'teacher1@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher2','email'=>'teacher2@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher3','email'=>'teacher3@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher4','email'=>'teacher4@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher5','email'=>'teacher5@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher6','email'=>'teacher6@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher7','email'=>'teacher7@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher8','email'=>'teacher8@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher9','email'=>'teacher9@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher10','email'=>'teacher10@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'teacher11','email'=>'teacher11@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher1','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher1@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher2','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher2@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher3','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher3@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher4','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher4@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher5','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher5@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher6','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher6@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher7','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher7@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher8','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher8@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher9','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher9@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher10','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher10@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'teacher11','image'=>public_path('Images').'/'.rand(1,3).'.jpg','email'=>'teacher11@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
         Teacher::create(['name'=>'admin','email'=>'admin@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'role'=>'admin','password'=>bcrypt('123456')]);
         Specialization::create(['name'=>'علمى']);
         Specialization::create(['name'=>'أدبى']);
