@@ -16,7 +16,8 @@ class TeacherResource extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'name'=>$this->email,
+            'name'=>$this->name,
+            'email'=>$this->email,
             'phone'=>$this->phone,
             'description'=>$this->description,
             'image'=>$this->image,

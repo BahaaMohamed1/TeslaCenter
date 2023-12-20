@@ -18,3 +18,4 @@ Route::get('teachers/{teacher}',[\App\Http\Controllers\general\TeacherController
 
 
 
+
