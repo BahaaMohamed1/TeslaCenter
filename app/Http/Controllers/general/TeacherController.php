@@ -16,4 +16,9 @@ class TeacherController extends Controller
     {
         return $this->success(TeacherResource::collection(Teacher::where('role','teacher')->get()));
     }
+
+    public function show(Teacher $teacher)
+    {
+        return $this->success(new TeacherResource($teacher));
+    }
 }

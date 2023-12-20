@@ -14,6 +14,7 @@ Route::get('grades',[\App\Http\Controllers\general\GradesController::class,'inde
 
 /////////// get all teachers /////////////
 Route::get('teachers',[\App\Http\Controllers\general\TeacherController::class,'index']);
+Route::get('teachers/{teacher}',[\App\Http\Controllers\general\TeacherController::class,'show']);
 
 
 
