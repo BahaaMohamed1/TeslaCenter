@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         Teacher::create(['name'=>'teacher9','image'=>asset('Images').'/'.rand(1,3).'.jpg','email'=>'teacher9@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
         Teacher::create(['name'=>'teacher10','image'=>asset('Images').'/'.rand(1,3).'.jpg','email'=>'teacher10@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
         Teacher::create(['name'=>'teacher11','image'=>asset('Images').'/'.rand(1,3).'.jpg','email'=>'teacher11@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'password'=>bcrypt('123456')]);
-        Teacher::create(['name'=>'admin','email'=>'admin@gmail.com','phone'=>'1234567899','description'=>fake()->sentence(20),'role'=>'admin','password'=>bcrypt('123456')]);
+        Teacher::create(['name'=>'admin','email'=>'admin@gmail.com','phone'=>'1234567899','image'=>"",'description'=>fake()->sentence(20),'role'=>'admin','password'=>bcrypt('123456')]);
         Specialization::create(['name'=>'علمى']);
         Specialization::create(['name'=>'أدبى']);
 
